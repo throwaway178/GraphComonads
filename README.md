@@ -1,1 +1,1 @@
-# StackProject
+# GraphComonads
