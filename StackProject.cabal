@@ -1,0 +1,86 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e462ee58c5fd6fe38259b6affb80025528eea298435e2836fc757f41c0267df4
+
+name:           StackProject
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/StackProject#readme>
+homepage:       https://github.com/githubuser/StackProject#readme
+bug-reports:    https://github.com/githubuser/StackProject/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/StackProject
+
+library
+  exposed-modules:
+      AlgGraphsCat
+      AlgGraphsExamples
+      BoundedTrees
+      Category
+      DrawGraphs
+      EF
+      SigmaStructures
+  other-modules:
+      Paths_StackProject
+  hs-source-dirs:
+      src
+  build-depends:
+      algebraic-graphs
+    , base >=4.7 && <5
+    , constrained-categories
+    , containers
+    , ghc-typelits-extra
+    , graphviz
+    , random
+  default-language: Haskell2010
+
+executable StackProject-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_StackProject
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      StackProject
+    , algebraic-graphs
+    , base >=4.7 && <5
+    , constrained-categories
+    , containers
+    , ghc-typelits-extra
+    , graphviz
+    , random
+  default-language: Haskell2010
+
+test-suite StackProject-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_StackProject
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      StackProject
+    , algebraic-graphs
+    , base >=4.7 && <5
+    , constrained-categories
+    , containers
+    , ghc-typelits-extra
+    , graphviz
+    , random
+  default-language: Haskell2010
